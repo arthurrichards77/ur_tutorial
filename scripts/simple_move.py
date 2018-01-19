@@ -18,7 +18,7 @@ g.trajectory = JointTrajectory()
 g.trajectory.joint_names = ['shoulder_pan_joint', 'shoulder_lift_joint', 'elbow_joint', 'wrist_1_joint', 'wrist_2_joint', 'wrist_3_joint']
 
 p1 = JointTrajectoryPoint()
-p1.positions = [2.2, 0, -1.57, 0, 0 ,0]
+p1.positions = [1.5, -0.2, -1.57, 0, 0 ,0]
 p1.velocities = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 p1.time_from_start = rospy.Duration(5.0)
 g.trajectory.points.append(p1)
@@ -30,7 +30,7 @@ p2.time_from_start = rospy.Duration(10.0)
 g.trajectory.points.append(p2)
 
 p3 = JointTrajectoryPoint()
-p3.positions = [1.5, -0.2, -1.57, 0, 0 ,0]
+p3.positions = [2.2, 0, -1.57, 0, 0 ,0]
 p3.velocities = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 p3.time_from_start = rospy.Duration(15.0)
 g.trajectory.points.append(p3)
