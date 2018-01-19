@@ -3,8 +3,6 @@ import roslib
 roslib.load_manifest('ur_tutorial')
 import rospy
 from trajectory_msgs.msg import JointTrajectory,JointTrajectoryPoint
-from control_msgs.msg import FollowJointTrajectoryGoal, FollowJointTrajectoryAction
-from actionlib import SimpleActionClient
 
 rospy.init_node("simple_move_pub")
 pub = rospy.Publisher("/arm_controller/command", JointTrajectory, queue_size=10)
