@@ -9,6 +9,9 @@ rospy.init_node("simple_move_goal_pub")
 pub = rospy.Publisher("/arm_controller/follow_joint_trajectory/goal", FollowJointTrajectoryActionGoal, queue_size=10)
 rospy.sleep(0.5)
 
+topic_name = rospy.resolve_name("/arm_controller/follow_joint_trajectory/goal")
+rospy.loginfo("Sending goal to %s", topic_name)
+
 traj = JointTrajectory()
 traj.joint_names = ['shoulder_pan_joint', 'shoulder_lift_joint', 'elbow_joint', 'wrist_1_joint', 'wrist_2_joint', 'wrist_3_joint']
 
