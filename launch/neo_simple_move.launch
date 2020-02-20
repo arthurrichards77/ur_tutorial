@@ -1,7 +1,0 @@
-<launch>
-
-<node pkg="ur_tutorial" type="simple_move_goal_pub.py" name="simple_move" output="screen" >
-  <remap from="/arm_controller/follow_joint_trajectory/goal" to="/follow_joint_trajectory/goal" />
-</node>
-
-</launch>
