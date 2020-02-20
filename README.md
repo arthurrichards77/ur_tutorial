@@ -18,6 +18,8 @@ roslaunch ur_gazebo ur10_joint_limited.launch
 ```
 You should see the Gazebo simulator with a world populated only by an arm.
 
+![Arm in Gazebo](https://github.com/arthurrichards77/ur_tutorial/raw/master/ur10gazebo.png "Arm viewed in gazebo")
+
 > Note: you’ll also get some red error messages about missing proportional gains in the controller descriptions.  You are safe to ignore these.  If you get any other errors, e.g. ‘unable to start arm_controller’ check that the ros_controllers packages as installed and that you have ‘joint_trajectory_controller’ showing in your rospack list.  If not, you'll need to do the following install: `sudo apt install joint_trajectory_controller`.  Summon help if you need admin access to a BRL machine.
 
 Now use rqt_graph, rostopic and rosparam to have a poke around the interface.  The joint_states topic and robot_description parameter are of interest.
@@ -73,10 +75,13 @@ Run it, and you should see your simulated arm moving.  Experiment with different
 
 With the robot simulator still running, start Rviz.
 If it’s not already running, add a “RobotModel” widget using the “Add” button at the bottom left.  You should be able to see your UR10 robot in Rviz now.
- 
-Note: Rviz and Gazebo now look rather similar.  Rviz is just drawing your robot using the “joint_states” and “robot_model” information from Gazebo.  Gazebo is simulating its behaviour.
+
+![Arm in Gazebo](https://github.com/arthurrichards77/ur_tutorial/raw/master/ur10rviz.png "Arm viewed in Rviz")
+
+> Note: Rviz and Gazebo now look rather similar.  Rviz is just drawing your robot using the “joint_states” and “robot_model” information from Gazebo.  Gazebo is simulating its behaviour.
 
 Then click the “add” button on the lower left and add a new TF viewer.  It’s easier to see what’s going on if you disable the robot model.  This is the transform tree for the robot reference frames, derived from the URDF in the “robot_model” parameter.  The “robot_state_publisher” node uses the URDF and the “joint_states” information to “tf” transforms.  You could use this information to find the pose of a target relative to the end effector.
 
+![Arm in Gazebo](https://github.com/arthurrichards77/ur_tutorial/raw/master/ur10tf.png "TF frames in RViz")
  
 
