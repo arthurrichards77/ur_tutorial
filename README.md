@@ -29,7 +29,7 @@ Create the following python script in the “scripts” subdirectory of your “
 ```python
 #!/usr/bin/env python
 import roslib
-roslib.load_manifest('ros_course')
+roslib.load_manifest('ur_tutorial')
 import rospy
 from trajectory_msgs.msg import JointTrajectory,JointTrajectoryPoint
 from control_msgs.msg import FollowJointTrajectoryActionGoal
