@@ -4,7 +4,7 @@ This handout shows how to use ROS to simulate a Universal Robotics UR10 robot ar
 
 ##	Software Installation
 The ROS drivers and simulators for the UR family of arms are provided in the universal_robot package.  We’re using ROS Melodic in the BRL PC lab in 2019 and this particular package hasn’t been upgraded since Kinetic, so you’ll need to install it from source by following these simple steps:
-1.	In a terminal, navigate to the ‘src’ subdirectory of your ROS catkin workspace, which you should have set up in our first ever training session.
+1.	In a terminal, navigate to the ‘src’ subdirectory of your [ROS catkin workspace](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
 2.	Download the source code from Github by typing:
 ```git clone https://github.com/ros-industrial/universal_robot```
 3.	Navigate back to the root directory of your workspace, above ‘src’, and compile it using the command below.  You may get some errors about missing ‘moveit’ content but that’s OK.  If you get any other errors, please seek help.
