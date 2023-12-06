@@ -3,7 +3,7 @@
 This handout shows how to use ROS to simulate a Universal Robotics UR10 robot arm, like those mounted on the Neobotix MPO-700 platforms at BRL.  Procedures for UR5 or UR3 arms are almost identical.
 
 ##	Software Installation
-The ROS drivers and simulators for the UR family of arms are provided in the universal_robot package.  We’re using ROS Melodic in the BRL PC lab in 2019 and this particular package hasn’t been upgraded since Kinetic, so you’ll need to install it from source by following these simple steps:
+The ROS drivers and simulators for the UR family of arms are provided in the universal_robot package.  We’re using ROS Noetic in the 2023 tutorials and this particular package hasn’t been upgraded since Kinetic, so you’ll need to install it from source by following these simple steps:
 1.	In a terminal, navigate to the ‘src’ subdirectory of your [ROS catkin workspace](http://wiki.ros.org/catkin/Tutorials/create_a_workspace).
 2.	Download the source code from Github by typing:
 ```git clone https://github.com/ros-industrial/universal_robot```

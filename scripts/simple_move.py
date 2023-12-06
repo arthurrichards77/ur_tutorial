@@ -9,9 +9,9 @@ from actionlib import SimpleActionClient
 rospy.init_node("simple_traj")
 client = SimpleActionClient("/arm_controller/follow_joint_trajectory", FollowJointTrajectoryAction)
 
-print "waiting to connect..."
+print("waiting to connect...")
 client.wait_for_server()
-print "connected! "
+print("connected! ")
 
 g = FollowJointTrajectoryGoal()
 g.trajectory = JointTrajectory()
@@ -36,8 +36,8 @@ p3.time_from_start = rospy.Duration(15.0)
 g.trajectory.points.append(p3)
 
 client.send_goal(g)
-print "sent the goal"
-print "waiting to get there"
+print("sent the goal")
+print("waiting to get there")
 client.wait_for_result()
-print "got there"
+print("got there")
 

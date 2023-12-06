@@ -34,4 +34,4 @@ p3.time_from_start = rospy.Duration(15.0)
 traj.points.append(p3)
 
 pub.publish(traj)
-print "sent the trajectory"
+print("sent the trajectory")
